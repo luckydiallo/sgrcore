@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity Reclamation.
+    -->
+    <changeSet id="20251223225918-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="filiere_id"
+                                 baseTableName="reclamation"
+                                 constraintName="fk_reclamation__filiere_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="filiere"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="matiere_id"
+                                 baseTableName="reclamation"
+                                 constraintName="fk_reclamation__matiere_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="matiere"
+                                 />
+    </changeSet>
+</databaseChangeLog>
