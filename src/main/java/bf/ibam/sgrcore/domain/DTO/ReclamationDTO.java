@@ -31,7 +31,9 @@ public class ReclamationDTO implements Serializable {
     @NotNull
     private String motifReclamation;
 
-    private String justificatif;
+    private byte[] justificatif;
+
+    private String justificatifContentType;
 
     private String etatReclamation;
 
@@ -107,12 +109,20 @@ public class ReclamationDTO implements Serializable {
         this.motifReclamation = motifReclamation;
     }
 
-    public String getJustificatif() {
+    public byte[] getJustificatif() {
         return justificatif;
     }
 
-    public void setJustificatif(String justificatif) {
+    public void setJustificatif(byte[] justificatif) {
         this.justificatif = justificatif;
+    }
+
+    public String getJustificatifContentType() {
+        return justificatifContentType;
+    }
+
+    public void setJustificatifContentType(String justificatifContentType) {
+        this.justificatifContentType = justificatifContentType;
     }
 
     public String getEtatReclamation() {

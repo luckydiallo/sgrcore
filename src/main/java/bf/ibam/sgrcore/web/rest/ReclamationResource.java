@@ -75,7 +75,7 @@ public class ReclamationResource {
      */
     @PostMapping("")
     public ResponseEntity<ReclamationDTO> createReclamation(@Valid @RequestBody ReclamationDTO reclamationDTO) throws URISyntaxException {
-        LOG.debug("REST request to save Reclamation : {}", reclamationDTO);
+        LOG.debug("REST request to save Reclamation : {}", "Justificatif ", reclamationDTO.getJustificatif());
         if (reclamationDTO.getId() != null) {
             throw new BadRequestAlertException("A new reclamation cannot already have an ID", ENTITY_NAME, "idexists");
         }

@@ -12,7 +12,7 @@ Ce service a été développé avec **Spring Boot**
 
 - Création des réclamations
 - Suivi et traitement des réclamations
--Gestion du cycle de vie des reclamations 
+- Gestion du cycle de vie des reclamations 
 
 ---
 
